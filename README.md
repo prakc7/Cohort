@@ -1,2 +1,2 @@
 # Cohort
-Shared: Works and assignments I am going to perform in cohort.
+Shared: Works and assignments that I am going to perform in cohort.

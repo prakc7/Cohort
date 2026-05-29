@@ -3,210 +3,235 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Two Leaves Inspired Tea</title>
+        <title>Two Leaves — Screenshot Replica</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="page-bg" aria-hidden="true">
-            <span class="orb orb-a"></span>
-            <span class="orb orb-b"></span>
-            <span class="orb orb-c"></span>
-            <span class="leaf leaf-1"></span>
-            <span class="leaf leaf-2"></span>
-            <span class="leaf leaf-3"></span>
-            <span class="leaf leaf-4"></span>
-        </div>
+        <div class="promo-strip">FREE US SHIPPING FOR ORDERS OVER $75</div>
 
-        <header class="topbar">
-            <a class="brand" href="#home" aria-label="Tea brand home">
-                <span class="brand-mark">2L</span>
-                <span class="brand-copy">
-                    <strong>Two Leaves</strong>
-                    <span>tea inspired</span>
-                </span>
-            </a>
+        <header class="header">
+            <div class="wrap header-inner">
+                <nav class="nav-left" aria-label="Primary left">
+                    <a href="#shop" class="nav-item">Shop <span class="caret" aria-hidden="true">▾</span></a>
+                    <a href="#learn" class="nav-item">Learn <span class="caret" aria-hidden="true">▾</span></a>
+                    <a href="#reviews" class="nav-item">Reviews <span class="star" aria-hidden="true">★</span></a>
+                </nav>
 
-            <nav class="nav" aria-label="Primary">
-                <a href="#collections">Collections</a>
-                <a href="#ritual">Ritual</a>
-                <a href="#story">Story</a>
-                <a href="#contact">Contact</a>
-            </nav>
+                <a class="brand" href="#top" aria-label="Home">
+                    <span class="brand-wordmark">two leaves<br><span class="amp">and a bud</span></span>
+                </a>
+
+                <nav class="nav-right" aria-label="Primary right">
+                    <a href="#account" class="nav-right-link">MY ACCOUNT</a>
+                    <a href="#partners" class="nav-right-link">CAFE &amp; WHOLESALE PARTNERS</a>
+                    <a href="#journal" class="nav-right-link">TEA JOURNAL</a>
+                    <a href="#cart" class="cart" aria-label="Cart">
+                        <span class="cart-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 6h15l-2 9H8L7 6Z" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M7 6 6.4 3.8A1 1 0 0 0 5.4 3H2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"/>
+                                <path d="M19 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="cart-badge" aria-label="items in cart">0</span>
+                    </a>
+                </nav>
+            </div>
         </header>
 
-        <main id="home">
-            <section class="hero">
-                <div class="hero-copy">
-                    <p class="eyebrow">Small-batch leaves, brewed slowly</p>
-                    <h1>Tea that moves like a ritual and feels like a quiet morning.</h1>
-                    <p class="lede">
-                        A cinematic landing page inspired by the warmth, motion, and botanical
-                        detail of a premium tea brand.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#collections">Explore blends</a>
-                        <a class="button button-secondary" href="#story">Our story</a>
-                    </div>
-
-                    <div class="hero-metrics" aria-label="Highlights">
-                        <div>
-                            <strong>18</strong>
-                            <span>origin stories</span>
-                        </div>
-                        <div>
-                            <strong>30s</strong>
-                            <span>brew-ready guide</span>
-                        </div>
-                        <div>
-                            <strong>100%</strong>
-                            <span>leaf-first focus</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-stage" aria-hidden="true">
-                    <div class="halo"></div>
-                    <div class="cup-wrap">
-                        <div class="steam steam-1"></div>
-                        <div class="steam steam-2"></div>
-                        <div class="steam steam-3"></div>
-                        <div class="cup">
-                            <div class="cup-rim"></div>
-                            <div class="tea-surface"></div>
-                            <div class="cup-handle"></div>
-                            <div class="cup-shadow"></div>
-                        </div>
-                        <div class="badge badge-top">Freshly steeped</div>
-                        <div class="badge badge-left">Organic</div>
-                        <div class="badge badge-right">Brewed bright</div>
-                    </div>
-
-                    <div class="orbit orbit-one"></div>
-                    <div class="orbit orbit-two"></div>
-                    <div class="botanical-card botanical-card-left">
-                        <span>White Tea</span>
-                        <strong>Jasmine bloom</strong>
-                    </div>
-                    <div class="botanical-card botanical-card-right">
-                        <span>Black Tea</span>
-                        <strong>Honey malt</strong>
-                    </div>
-                </div>
-            </section>
-
-            <section class="ticker" aria-label="Brand values">
-                <div class="ticker-track">
-                    <span>calm mornings</span>
-                    <span>slow steeping</span>
-                    <span>bright botanicals</span>
-                    <span>earthy notes</span>
-                    <span>sunlit rituals</span>
-                    <span>calm mornings</span>
-                    <span>slow steeping</span>
-                    <span>bright botanicals</span>
-                    <span>earthy notes</span>
-                    <span>sunlit rituals</span>
-                </div>
-            </section>
-
-            <section class="section" id="collections">
-                <div class="section-heading">
-                    <p class="eyebrow">Collections</p>
-                    <h2>Three blends designed to feel tactile, fragrant, and alive.</h2>
-                </div>
-
-                <div class="cards">
-                    <article class="tea-card card-a">
-                        <div class="card-visual visual-sage"></div>
-                        <p class="card-kicker">Morning lift</p>
-                        <h3>Minted Green</h3>
+        <main id="top">
+            <section class="hero" id="shop">
+                <div class="wrap hero-inner">
+                    <div class="hero-copy">
+                        <h1>A cup that fits the moment.</h1>
                         <p>
-                            Crisp, cool, and vivid with a clean finish that reads like fresh air.
+                            From compostable whole leaf tea sachets and iced tea to tea lattes and matcha,
+                            we’ve got something for everyone.
                         </p>
-                        <a href="#contact">Order sample</a>
-                    </article>
-
-                    <article class="tea-card card-b">
-                        <div class="card-visual visual-amber"></div>
-                        <p class="card-kicker">Evening glow</p>
-                        <h3>Spiced Amber</h3>
-                        <p>
-                            Warm citrus, toasted spice, and a lingering caramel note.
-                        </p>
-                        <a href="#contact">Order sample</a>
-                    </article>
-
-                    <article class="tea-card card-c">
-                        <div class="card-visual visual-forest"></div>
-                        <p class="card-kicker">Quiet reset</p>
-                        <h3>Forest Oolong</h3>
-                        <p>
-                            Layered florals and wood smoke with a soft, rounded body.
-                        </p>
-                        <a href="#contact">Order sample</a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section ritual-section" id="ritual">
-                <div class="section-heading">
-                    <p class="eyebrow">Ritual</p>
-                    <h2>A simple brew flow with a little theater built into every step.</h2>
-                </div>
-
-                <div class="ritual-grid">
-                    <div class="ritual-step">
-                        <span>01</span>
-                        <h3>Warm the cup</h3>
-                        <p>Heat the vessel so the aroma opens slowly and evenly.</p>
+                        <a class="btn btn-primary" href="#discover">Shop Now</a>
                     </div>
-                    <div class="ritual-step">
-                        <span>02</span>
-                        <h3>Bloom the leaves</h3>
-                        <p>Let the water circle the blend to wake the oils and petals.</p>
-                    </div>
-                    <div class="ritual-step">
-                        <span>03</span>
-                        <h3>Pause and pour</h3>
-                        <p>Wait for the surface to settle before the first sip.</p>
+
+                    <div class="hero-media" aria-hidden="true">
+                        <img
+                            src="https://images.unsplash.com/photo-1545161296-3a6e2f3a1f9a?auto=format&fit=crop&w=1200&q=80"
+                            alt=""
+                        />
                     </div>
                 </div>
             </section>
 
-            <section class="section story-section" id="story">
-                <div class="story-panel">
+            <section class="journal-promo" id="journal">
+                <div class="wrap">
+                    <div class="center-btn">
+                        <a class="btn btn-primary" href="#journal">Explore The Tea Journal</a>
+                    </div>
+
+                    <div class="journal-hero">
+                        <div class="journal-tile">
+                            <div class="journal-tile-inner">
+                                <h2>Great Tea.<br>In Good<br>Company.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="discover" id="discover">
+                <div class="wrap">
+                    <div class="discover-head">
+                        <span class="sticker">DISCOVER</span>
+                        <h2>Let’s find a cup that fits the <em>moment</em>.<br>What are you searching for?</h2>
+                    </div>
+
+                    <div class="search-row">
+                        <input class="search" placeholder="herb" aria-label="search" />
+                    </div>
+
+                    <p class="sub">OR EXPLORE BY VIBE...</p>
+                    <div class="chips" aria-label="vibe chips">
+                        <button class="chip">A Sweet Treat</button>
+                        <button class="chip">Evening Unwind</button>
+                        <button class="chip">Focused &amp; Clear</button>
+                        <button class="chip">Caffeine!</button>
+                        <button class="chip">Caffeine-Free</button>
+                        <button class="chip">Ceremony-Worthy</button>
+                        <button class="chip">Whole Leaf</button>
+                        <button class="chip">Over Ice</button>
+                        <button class="chip">Lattes</button>
+                        <button class="chip">Black Tea</button>
+                        <button class="chip">Green Tea</button>
+                        <button class="chip">Herbal Tea</button>
+                        <button class="chip">Organic</button>
+                        <button class="chip">Barista Favorite</button>
+                        <button class="chip">Calm &amp; Cozy</button>
+                        <button class="chip">Fruit Forward</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews" id="reviews">
+                <div class="wrap">
+                    <span class="sticker green">REVIEWS</span>
+                    <h2>Loved by tea people <em>everywhere</em>.<br>Here’s what they’re saying.</h2>
+
+                    <div class="review-grid">
+                        <article class="review-card peach">
+                            <p class="quote">“The right amount of spice.”</p>
+                            <p class="who">Angelina R.</p>
+                        </article>
+                        <article class="review-card lime">
+                            <p class="quote">“Incredibly refreshing, especially over ice.”</p>
+                            <p class="who">Jacob K.</p>
+                        </article>
+                        <article class="review-card yellow">
+                            <p class="quote">“Clean energy, rich flavor — literally liquid gold.”</p>
+                            <p class="who">Harrison G.</p>
+                        </article>
+                        <article class="review-card green">
+                            <p class="quote">“So tasty and energizing.”</p>
+                            <p class="who">Gracie M.</p>
+                        </article>
+                        <article class="review-card lavender">
+                            <p class="quote">“The perfect start to my day.”</p>
+                            <p class="who">Jorge F.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="story" id="learn">
+                <div class="story-bg" aria-hidden="true"></div>
+                <div class="wrap story-inner">
+                    <div class="story-icons">
+                        <div class="icon-pill">
+                            <span class="icon-circle" aria-hidden="true">🍃</span>
+                            <span>QUALITY, WITHOUT PRETENSE</span>
+                        </div>
+                        <div class="icon-pill">
+                            <span class="icon-circle" aria-hidden="true">🌎</span>
+                            <span>CARE FOR PEOPLE &amp; PLANET</span>
+                        </div>
+                        <div class="icon-pill">
+                            <span class="icon-circle" aria-hidden="true">⛰️</span>
+                            <span>TRANSPARENT SOURCING</span>
+                        </div>
+                    </div>
+                    <a class="btn btn-light" href="#story">Our Story</a>
+                </div>
+
+                <div class="story-quote">
+                    <div class="wrap">
+                        <p>
+                            Our founder started Two Leaves and a Bud in pursuit of a truly great cup.
+                            Two decades later, that same care and curiosity guide everything we make.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+    
+            <section class="newsletter">
+                <div class="wrap newsletter-inner">
+                    <h3>Get news stories, brewing tips, and special offers straight to your inbox.</h3>
+                    <div class="signup">
+                        <input placeholder="name@email.com" aria-label="email">
+                        <button class="btn btn-primary" type="button">Submit</button>
+                    </div>
+                    <div class="social" aria-label="social links">
+                        <a href="#" aria-label="facebook">f</a>
+                        <a href="#" aria-label="instagram">○</a>
+                        <a href="#" aria-label="linkedin">in</a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer" id="partners">
+                <div class="wrap footer-grid">
                     <div>
-                        <p class="eyebrow">Story</p>
-                        <h2>Botanical branding with layered motion, soft contrast, and a handcrafted feel.</h2>
+                        <h4>Tea Varieties</h4>
+                        <ul>
+                            <li>Whole Leaf Tea Sachets</li>
+                            <li>Pure Matcha</li>
+                            <li>Tea Lattes</li>
+                            <li>Iced Tea</li>
+                        </ul>
                     </div>
-                    <p>
-                        The whole composition is built in HTML and CSS: floating leaves, drifting
-                        halos, a bobbing cup, glowing cards, and a moving brand ticker to echo the
-                        animated energy of the reference site.
-                    </p>
+                    <div>
+                        <h4>Collections</h4>
+                        <ul>
+                            <li>Matcha</li>
+                            <li>Chai</li>
+                            <li>Organic Tea</li>
+                            <li>Black Tea</li>
+                            <li>Green Tea</li>
+                            <li>Herbal Tea</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Learn</h4>
+                        <ul>
+                            <li>Our Story</li>
+                            <li>Our Spirit</li>
+                            <li>FAQ</li>
+                            <li>Reviews</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Tea Journal</h4>
+                        <ul>
+                            <li>All Articles</li>
+                            <li>Tea 101</li>
+                            <li>Recipes</li>
+                            <li>Sustainability</li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-
-            <section class="section contact-section" id="contact">
-                <div class="contact-card">
-                    <p class="eyebrow">Contact</p>
-                    <h2>Ready to steep your own version of this page?</h2>
-                    <p>Swap in your own tea copy, colors, and product photos once the structure is in place.</p>
-                    <a class="button button-primary" href="#home">Back to top</a>
-                </div>
-            </section>
+                <div class="wrap credit">© TWO LEAVES AND A BUD 2026 — SITE BY MANUFACTUR</div>
+            </footer>
         </main>
     </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
 </html>

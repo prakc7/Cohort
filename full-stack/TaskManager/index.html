@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Your Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <h1>Keep Align With Your Tasks</h1>
+        <button id="themeBtn">Dark Mode</button>
+    </header>
+
+    <section class="task-form-section">
+        <h2>Create Task</h2>
+
+        <div class="form-group">
+            <input type="text" id="taskInput" placeholder="Enter task title">
+
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+                <option value="Health">Health</option>
+            </select>
+
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <div class="attribute-demo">
+            <button id="attributeBtn">
+                Show Attribute vs Property
+            </button>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="card">
+            <h3>Total</h3>
+            <p id="totalCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <p id="completedCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+    </section>
+
+    <section class="controls">
+        <input type="text" id="searchInput" placeholder="Search tasks...">
+
+        <select id="filterCategory">
+            <option value="All">All Categories</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+            <option value="Personal">Personal</option>
+            <option value="Health">Health</option>
+        </select>
+
+        <button id="clearAllBtn">
+            Clear All
+        </button>
+    </section>
+
+    <section>
+        <h2>Tasks</h2>
+
+        <div id="taskContainer"></div>
+    </section>
+
+    <section class="event-demo">
+        <h2>Event Propagation Demo</h2>
+
+        <div id="grandparent">
+            Grandparent
+
+            <div id="parent">
+                Parent
+
+                <button id="childBtn">
+                    Child Button
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pipeline">
+        <h2>Browser Rendering Pipeline</h2>
+
+        <div class="flow">
+
+            <div class="step">HTML</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Parsing</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Tokenization</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">DOM Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">CSSOM Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Render Tree</div>
+            <div class="arrow">↓</div>
+
+            <div class="step">Layout & Paint</div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

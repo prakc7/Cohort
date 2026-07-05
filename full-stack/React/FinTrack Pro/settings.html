@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings - FinTrack Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body data-page="settings">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                    <strong>FinTrack Pro</strong>
+                    <span>Enterprise Finance</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard.html"><i class="fa-solid fa-chart-simple"></i> Dashboard</a>
+                <a class="active" href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+            <a class="btn btn-primary sidebar-action" href="dashboard.html"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+        </aside>
+
+        <div class="app-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Manage your account preferences</p>
+                    <h1>Settings</h1>
+                </div>
+                <button id="logoutButton" class="btn btn-ghost" type="button">Logout</button>
+            </header>
+
+            <section class="panel settings-panel">
+                <form id="settingsForm" class="settings-form">
+                    <div class="two-column">
+                        <label class="field">
+                            <span>Full Name</span>
+                            <input id="profileName" type="text" placeholder="Your name" required>
+                        </label>
+                        <label class="field">
+                            <span>Primary Currency</span>
+                            <select id="profileCurrency"></select>
+                        </label>
+                    </div>
+
+                    <div class="settings-row">
+                        <div>
+                            <strong>Dark Mode</strong>
+                            <p class="muted">Remember your preferred theme across sessions.</p>
+                        </div>
+                        <label class="toggle">
+                            <input id="settingsDarkMode" type="checkbox" aria-label="Toggle dark mode">
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="settings-actions">
+                        <button class="btn btn-dark" type="submit">Save Changes</button>
+                        <button id="resetAllDataButton" class="btn btn-danger" type="button">Reset All Data</button>
+                    </div>
+                    <div id="settingsMessage" class="status-message" aria-live="polite"></div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/transactions.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

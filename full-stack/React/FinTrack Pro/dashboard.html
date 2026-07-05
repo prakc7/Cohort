@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard - FinTrack Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-page="dashboard">
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <i class="fa-solid fa-wallet"></i>
+                <div>
+                    <strong>FinTrack Pro</strong>
+                    <span>Enterprise Finance</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a class="active" href="dashboard.html"><i class="fa-solid fa-chart-simple"></i> Dashboard</a>
+                <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+            </nav>
+
+            <button id="addTransactionButton" class="btn btn-primary sidebar-action" type="button">
+                <i class="fa-solid fa-plus"></i> Add Transaction
+            </button>
+        </aside>
+
+        <div class="app-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Real-time tracking application</p>
+                    <h1>Financial Overview</h1>
+                </div>
+                <div class="topbar-actions">
+                    <span id="userGreeting" class="user-pill"></span>
+                    <button id="logoutButton" class="btn btn-ghost" type="button">Logout</button>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <span>Current Balance</span>
+                    <strong id="currentBalance">$0.00</strong>
+                </article>
+                <article class="stat-card income">
+                    <span>Total Income</span>
+                    <strong id="totalIncome">$0.00</strong>
+                </article>
+                <article class="stat-card expense">
+                    <span>Total Expense</span>
+                    <strong id="totalExpense">$0.00</strong>
+                </article>
+                <article class="stat-card">
+                    <span>Total Transactions</span>
+                    <strong id="totalTransactions">0</strong>
+                </article>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="panel chart-panel">
+                    <div class="panel-heading">
+                        <h2>Cash Flow Analysis</h2>
+                        <span id="exchangeRateStamp" class="muted"></span>
+                    </div>
+                    <div class="chart-wrap">
+                        <canvas id="cashFlowChart"></canvas>
+                    </div>
+                </article>
+
+                <aside class="panel preferences-panel">
+                    <h2>Preferences</h2>
+                    <label class="switch-row">
+                        <span>Dark Mode</span>
+                        <input id="darkModeToggle" type="checkbox">
+                    </label>
+                    <button id="resetAllDataButton" class="btn btn-danger btn-block" type="button">
+                        <i class="fa-solid fa-trash-can"></i> Reset All Data
+                    </button>
+                </aside>
+            </section>
+
+            <section class="panel transaction-panel">
+                <div class="panel-heading panel-heading--stack">
+                    <div>
+                        <h2>All Transactions</h2>
+                        <p class="muted">Filter, search, and delete entries from local storage.</p>
+                    </div>
+                    <div class="transaction-controls">
+                        <label class="search-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input id="transactionSearch" type="search" placeholder="Search transactions...">
+                        </label>
+                        <div class="filter-group">
+                            <button class="filter-button active" type="button" data-filter="all">All Types</button>
+                            <button class="filter-button" type="button" data-filter="income">Income Only</button>
+                            <button class="filter-button" type="button" data-filter="expense">Expense Only</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="transactions-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactionTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="transactionModal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" data-close-modal></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>Add Transaction</h2>
+                <button id="closeTransactionModalButton" type="button" class="icon-button" aria-label="Close modal">&times;</button>
+            </div>
+
+            <form id="transactionForm" class="transaction-form">
+                <label class="field">
+                    <span>Type</span>
+                    <select id="transactionType">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    <span>Description</span>
+                    <input id="transactionDescription" type="text" placeholder="e.g. Salary, Coffee" required>
+                </label>
+
+                <div class="two-column">
+                    <label class="field">
+                        <span>Amount</span>
+                        <input id="transactionAmount" type="number" min="0" step="0.01" placeholder="0.00" required>
+                    </label>
+                    <label class="field">
+                        <span>Currency</span>
+                        <select id="transactionCurrency"></select>
+                    </label>
+                </div>
+
+                <div class="two-column">
+                    <label class="field">
+                        <span>Date</span>
+                        <input id="transactionDate" type="date" required>
+                    </label>
+                    <label class="field">
+                        <span>Category</span>
+                        <select id="transactionCategory"></select>
+                    </label>
+                </div>
+
+                <div id="transactionError" class="error-box"></div>
+
+                <button class="btn btn-dark btn-block" type="submit">Save Transaction</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/currency.js"></script>
+    <script src="js/transactions.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

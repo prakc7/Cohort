@@ -1,0 +1,183 @@
+.landing-page,
+.auth-shell {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.landing-hero,
+.auth-shell {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.landing-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.landing-hero {
+    padding-top: 2rem;
+}
+
+.hero-copy,
+.hero-panel,
+.auth-panel {
+    padding: 2rem;
+}
+
+.hero-copy h1,
+.auth-form h2,
+.auth-panel h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.hero-copy p,
+.auth-panel p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.hero-actions,
+.auth-benefits,
+.switch-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hero-panel {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+}
+
+.hero-card {
+    padding: 1.5rem;
+}
+
+.hero-card strong {
+    display: block;
+    font-size: 2.4rem;
+    margin: 0.5rem 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.hero-grid article {
+    padding: 1.25rem;
+}
+
+.positive {
+    color: var(--success);
+}
+
+.negative {
+    color: var(--danger);
+}
+
+.auth-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.auth-panel--info {
+    background: linear-gradient(160deg, rgba(37, 99, 235, 0.12), rgba(14, 165, 233, 0.05));
+}
+
+.auth-panel--accent {
+    background: linear-gradient(160deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.96));
+    color: #f8fafc;
+}
+
+.auth-panel--accent p,
+.auth-panel--accent .auth-benefits li {
+    color: rgba(248, 250, 252, 0.78);
+}
+
+.auth-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.auth-brand i {
+    font-size: 1.7rem;
+    color: var(--primary);
+}
+
+.auth-brand strong,
+.auth-brand span {
+    display: block;
+}
+
+.auth-brand span {
+    font-size: 0.92rem;
+    color: var(--muted);
+}
+
+.auth-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.field span {
+    display: block;
+    margin-bottom: 0.45rem;
+    font-weight: 600;
+}
+
+.password-field {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.password-field button {
+    width: 3rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--muted);
+}
+
+.check-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: var(--muted);
+}
+
+.auth-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    flex-direction: column;
+}
+
+.switch-link {
+    justify-content: center;
+    margin: 0;
+}
+
+.error-box {
+    color: var(--danger);
+}
+
+@media (max-width: 900px) {
+    .landing-hero,
+    .auth-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+}

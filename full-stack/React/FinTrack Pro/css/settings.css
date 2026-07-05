@@ -1,0 +1,69 @@
+.settings-panel {
+    max-width: 920px;
+}
+
+.settings-form {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.toggle {
+    position: relative;
+    width: 58px;
+    height: 32px;
+    display: inline-block;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle span {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: #cbd5e1;
+    transition: background 0.2s ease;
+}
+
+.toggle span::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 4px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.toggle input:checked + span {
+    background: var(--primary);
+}
+
+.toggle input:checked + span::after {
+    transform: translateX(26px);
+}
+
+.settings-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.status-message {
+    font-weight: 600;
+}

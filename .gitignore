@@ -20,7 +20,7 @@ cypress/screenshots/
 *.tsbuildinfo
 
 # Editor and OS clutter
-.vscode/
+.vscode/settings.json
 .idea/
 .history/
 .DS_Store
